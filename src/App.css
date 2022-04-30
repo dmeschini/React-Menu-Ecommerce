@@ -28,9 +28,6 @@ code {
   ;
 }
 
-.logo{
-  grid-area: logo;
-}
 
 .greeting{
   grid-area: greeting;
@@ -42,6 +39,7 @@ code {
 
 .App-logo {  
   pointer-events: none;
+  grid-area: logo;
 }
 
 @media (prefers-reduced-motion: no-preference) {

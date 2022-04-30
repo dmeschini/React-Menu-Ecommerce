@@ -7,10 +7,10 @@ import LogoTienda from './components/LogoTienda';
 function App() {
   return (
     <div className="App">
-      <LogoTienda className="logo"/>
-      <NavBar className="bar"/>       
-      <CartWidget className="cart"/>
-      <ItemListContainer className="greeting" greeting="¡Bienvenidos a Bit-Byte Computación!"/>         
+      <LogoTienda/>
+      <NavBar/>       
+      <CartWidget/>
+      <ItemListContainer title="¡Bienvenidos a Bit-Byte Computación!"/>         
     </div>
   );
 }
