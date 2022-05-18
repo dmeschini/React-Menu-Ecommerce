@@ -19,7 +19,7 @@ function ItemDetailContainer({title}) {
     getData(id).then((data)=>{
       setArticle(data);      
     })
-  },[]);  
+  },[id]);  
 
   return (
     <div> 
