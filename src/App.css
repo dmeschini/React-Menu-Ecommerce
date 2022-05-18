@@ -8,10 +8,7 @@ body {
   background-color: grey;
   background-image: url(./assets/images/cielo.jpg);
 }
-.navbar {
-  height: 6vh;  
-  grid-area: bar;
-  }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -21,13 +18,17 @@ code {
   display: grid; 
   text-align: center;  
   padding: 1rem;
-  grid-gap: 1rem;  
+  grid-gap: 1rem;   
   grid-template-areas: 
   "logo bar cart"
   "greeting greeting greeting"
   ;
 }
 
+.navbar {
+  height: 6vh;  
+  grid-area: bar;  
+  }
 
 .greeting{
   grid-area: greeting;
@@ -40,6 +41,11 @@ code {
 .App-logo {  
   pointer-events: none;
   grid-area: logo;
+}
+
+.item{
+  display: grid;
+  grid-gap: 1rem;  
 }
 
 @media (prefers-reduced-motion: no-preference) {

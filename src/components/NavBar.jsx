@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom'
+
 function NavBar(){
     return(                 
 <nav className="navbar navbar-expand-lg navbar-light fs-5">
@@ -8,18 +10,21 @@ function NavBar(){
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
+          <Link className="nav-link active" aria-current="page" to="/">Home</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link active" href="#">Ofertas Especiales</a>
+          <Link className="nav-link active" to="#">Ofertas Especiales</Link>
         </li>
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Opciones
-          </a>
+          </Link>
           <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a className="dropdown-item" href="#">Categorías</a></li>
-            <li><a className="dropdown-item" href="#">Ofertas</a></li>  
+            <li><Link className="dropdown-item" to="/categoria/components">Componentes</Link></li>
+            <li><Link className="dropdown-item" to="/categoria/peripheral">Periféricos</Link></li>
+            <li><Link className="dropdown-item" to="/categoria/audio">Audio</Link></li>
+            <li><Link className="dropdown-item" to="/categoria/video">Video</Link></li>
+            <li><Link className="dropdown-item" to="/categoria/">Ofertas</Link></li>  
           </ul>
         </li>        
       </ul>
