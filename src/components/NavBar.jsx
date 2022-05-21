@@ -1,6 +1,9 @@
 import {Link} from 'react-router-dom'
+import useCartContext from '../store/CartContext';
 
 function NavBar(){
+  const {contextFunction}=useCartContext();
+  contextFunction();
     return(                 
 <nav className="navbar navbar-expand-lg navbar-light fs-5">
   <div className="container-fluid">    
