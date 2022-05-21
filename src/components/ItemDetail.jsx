@@ -2,6 +2,7 @@ import React from 'react'
 import ItemCount from './ItemCount'
 import {useState} from 'react'
 import useCartContext from '../store/CartContext'
+import {Link} from 'react-router-dom'
 
 function ItemDetail({article}) {
   const [isInCart, setIsInCart]= useState(false)
@@ -20,7 +21,9 @@ function ItemDetail({article}) {
           <h4>$: {article.price}</h4>
           <h4>Stock: {article.stock}</h4>    
           {isInCart?
+          <Link to={`/Cart`}>
           <button>Ir al Carrito</button>
+          </Link>
           :
           <ItemCount onAdd={onAdd} stock={article.stock} initial={1}/>
         }          

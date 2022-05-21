@@ -1,7 +1,16 @@
 import widgetCart from '../assets/images/carrito.png'
+import useCartContext from '../store/CartContext'
+import { Link } from 'react-router-dom'
+
 function CartWidget() {
+  const {cantInCart} = useCartContext();
   return (
-    <img className="cart" src={widgetCart} alt="Carrito"  width="40" height="40"/>
+    <div>
+      <h6>{cantInCart()}</h6>
+       <Link to={`/Cart`}>         
+         <img src={widgetCart} alt="Carrito" width="40" height="40"/>                   
+       </Link>
+    </div>    
   )
 }
 

@@ -20,7 +20,7 @@ code {
   padding: 1rem;
   grid-gap: 1rem;   
   grid-template-areas: 
-  "logo bar cart"
+  "logo bar cart "
   "greeting greeting greeting"
   ;
 }

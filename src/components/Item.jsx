@@ -11,7 +11,6 @@ function Item({articleIterado}) {
           <Link to={`/article/${articleIterado.id}`}>
             <button className='btn-primary'>Ver Detalles</button>
           </Link>
-          
     </div>
   )
 }

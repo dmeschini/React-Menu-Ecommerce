@@ -27,7 +27,7 @@ export function CartContextProvider({children}){
     if((cart.some(value => item === value.id)))return true;
     return false;
   }
-  
+  const clearCart=()=>{setCart([])};
   const removeFromCart = (id) =>{
     const newCart = [...cart];
     const cartFilter = newCart.filter(item =>{
@@ -35,11 +35,20 @@ export function CartContextProvider({children}){
     });
     setCart(cartFilter);
   }
-  
+  function cantInCart(){   
+    let cartItems=0;
+    cart.forEach((item)=>cartItems +=item.cant);
+    return cartItems;
+  }
+  const calcPriceCart =()=>{
+    let total=0;
+    cart.forEach(item=>total +=(item.price)*(item.cant));
+    return total;
+  }
 
   const contextFunction = ()=> console.log("Contexto Listo")
     return(
-    <CartContext.Provider value={{contextFunction,cart,addToCart,removeFromCart}}>
+    <CartContext.Provider value={{contextFunction,cart,addToCart,removeFromCart,clearCart,cantInCart,calcPriceCart}}>
         {children}
     </CartContext.Provider>  
     
