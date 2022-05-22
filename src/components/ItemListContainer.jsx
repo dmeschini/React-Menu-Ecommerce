@@ -1,25 +1,23 @@
 import React, {useState,useEffect} from 'react';
-import articlesData from "../data/articlesData";
+//import articlesData from "../data/articlesData";
+import { getAllItems as getData, getItemsByCategory } from '../data/index';
 import ItemList from './ItemList';
 import {useParams} from 'react-router-dom'
-
-function getData(categoryid){
-  return new Promise((resolve,reject)=>{
-    setTimeout(() => {
-      if (categoryid===undefined) resolve(articlesData)
-      const productRequested = articlesData.filter((articles)=>articles.category===categoryid)
-      resolve(productRequested);
-    }, 500);    
-  })
-}
 
 function ItemListContainer(props) { 
   const {categoryid}=useParams()
   const [articles, setArticles]=useState([]);
   useEffect(()=>{
-    getData(categoryid).then((data)=>{
+    if (categoryid===undefined){
+    getData().then((data)=>{
       setArticles(data);
-    })
+    });
+  }
+  else {
+    getItemsByCategory(categoryid).then((data)=>{
+      setArticles(data);
+    });
+  }
   },[categoryid]);  
 
   return (

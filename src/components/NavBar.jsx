@@ -26,8 +26,7 @@ function NavBar(){
             <li><Link className="dropdown-item" to="/categoria/components">Componentes</Link></li>
             <li><Link className="dropdown-item" to="/categoria/peripheral">Periféricos</Link></li>
             <li><Link className="dropdown-item" to="/categoria/audio">Audio</Link></li>
-            <li><Link className="dropdown-item" to="/categoria/video">Video</Link></li>
-            <li><Link className="dropdown-item" to="/categoria/">Ofertas</Link></li>  
+            <li><Link className="dropdown-item" to="/categoria/video">Video</Link></li>            
           </ul>
         </li>        
       </ul>
