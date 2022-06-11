@@ -3,6 +3,7 @@ import ItemCount from './ItemCount'
 import {useState} from 'react'
 import useCartContext from '../store/CartContext'
 import {Link} from 'react-router-dom'
+import Card from 'react-bootstrap/Card'
 
 function ItemDetail({article}) {
   const [isInCart, setIsInCart]= useState(false)
@@ -16,17 +17,24 @@ function ItemDetail({article}) {
   return (
     <div>
         <div key={article.id}>
-          <br/>
-          <h2>{article.name}</h2>
+        <Card bg='light' border='primary' style={{ width: '18rem' }}>
+        <Card.Header>{article.name}</Card.Header>
+          <Card.Img variant="top" src={article.url} />          
+          <Card.Body> 
           <h4>$: {article.price}</h4>
           <h4>Stock: {article.stock}</h4>    
           {isInCart?
           <Link to={`/Cart`}>
-          <button>Ir al Carrito</button>
+          <button className='btn-success'>Ir al Carrito</button>
           </Link>
           :
-          <ItemCount onAdd={onAdd} stock={article.stock} initial={1}/>
-        }          
+          <div>
+           <h3>Compra tus items</h3>
+           <ItemCount onAdd={onAdd} stock={article.stock} initial={1}/>
+          </div>
+        }     
+          </Card.Body>          
+        </Card>
         </div>      
     </div>
   )

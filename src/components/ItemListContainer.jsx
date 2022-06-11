@@ -24,7 +24,6 @@ function ItemListContainer(props) {
     <div className='greeting'>
         <h3>{props.title}</h3>
         <ItemList articles={articles}/>
-
     </div>
   )
 }

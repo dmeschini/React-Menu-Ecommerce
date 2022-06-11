@@ -7,7 +7,8 @@ import CartWidget from './components/CartWidget';
 import LogoTienda from './components/LogoTienda';
 import {BrowserRouter,Route,Routes } from 'react-router-dom';
 import {CartContextProvider} from './store/CartContext'
-
+import CheckOut from './components/CheckOut';
+import DataForm from './components/DataForm'
 function App() {  
   return (    
     <div className="App">
@@ -21,6 +22,8 @@ function App() {
         <Route path="/article/:id" element={<ItemDetailContainer title="Detalles del Producto: "/>}></Route>       
         <Route path="/categoria/:categoryid" element={<ItemListContainer title="Productos disponibles: "/>}></Route>
         <Route path='/Cart' element={<CartView/>}></Route>
+        <Route path='/checkOut' element={<CheckOut/>}></Route>
+        <Route path='/dataform' element={<DataForm/>}></Route>
       </Routes>   
      </BrowserRouter>  
      </CartContextProvider>                 

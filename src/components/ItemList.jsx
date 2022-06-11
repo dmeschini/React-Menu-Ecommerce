@@ -3,8 +3,8 @@ import Item from './Item'
 
 function Itemlist({articles}) {
   return (
-    <div>
-        {articles.map((article)=>        
+    <div  className='container item'>
+        {articles.map((article)=>  
            <Item key={article.id} articleIterado={article}/>
         )}
     </div> 

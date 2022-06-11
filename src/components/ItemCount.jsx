@@ -11,8 +11,7 @@ function ItemCount(props) {
   }
   
     return (
-    <div>
-        <h3>Compra tus Items</h3>
+    <div>        
         <div>
             <button className='btn-primary' onClick={handleSubstract}>-</button>
             <span>  {count}  </span>

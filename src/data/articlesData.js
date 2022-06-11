@@ -4,14 +4,16 @@ const articlesData = [{
     "code": "tortor id",
     "price": 776.87,
     "stock": 7,
-    "category":"video"
+    "category":"video",
+    "url":"https://cdn.pixabay.com/photo/2018/03/27/00/50/child-3264751__340.jpg"
   }, {
     "id": 1,
     "name": "Pad",
     "code": "enim in",
     "price": 174.18,
     "stock": 4,
-    "category":"peripheral"
+    "category":"peripheral",
+    "url":"https://cdn.pixabay.com/photo/2021/04/07/16/13/gaming-mouse-6159550__340.jpg"
   }, {
     "id": 2,
     "name": "Mouse",
@@ -25,7 +27,8 @@ const articlesData = [{
     "code": "magna at",
     "price": 682.36,
     "stock": 3,
-    "category":"components"
+    "category":"components",
+    "url":"https://cdn.pixabay.com/photo/2014/12/11/22/07/cpu-564771__340.jpg"
   }, {
     "id": 4,
     "name": "MotherBoard",
@@ -39,7 +42,8 @@ const articlesData = [{
     "code": "sit amet",
     "price": 300.53,
     "stock": 1,
-    "category":"components"
+    "category":"components",
+    "url":""
   }, {
     "id": 6,
     "name": "UPS",
@@ -53,7 +57,8 @@ const articlesData = [{
     "code": "non sodales",
     "price": 460.21,
     "stock": 6,
-    "category":"audio"
+    "category":"audio",
+    "url":"https://cdn.pixabay.com/photo/2016/11/29/09/08/headphones-1868612__340.jpg"
   }, {
     "id": 8,
     "name": "PowerSupply",

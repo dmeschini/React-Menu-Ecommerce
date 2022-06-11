@@ -14,7 +14,7 @@ function ItemDetailContainer({title}) {
   },[id]);  
 
   return (
-    <div> 
+    <div className='greeting'> 
         <h4>{title}</h4>       
         <ItemDetail article={article}/>
     </div>
